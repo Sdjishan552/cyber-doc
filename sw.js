@@ -2,7 +2,7 @@
    view keeps working with no internet connection. Data itself lives
    in localStorage, which is already available offline. */
 
-const CACHE_NAME = "doccounter-v7";
+const CACHE_NAME = "doccounter-v8";
 const APP_SHELL = [
   "./",
   "./index.html",
