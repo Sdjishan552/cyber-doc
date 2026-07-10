@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DocCounter - Document &amp; Charges Register</title>
+<meta name="description" content="Look up required documents and service charges for Aadhaar, Voter ID, Ration Card and more.">
+<meta name="theme-color" content="#14213D">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#/" class="brand" aria-label="DocCounter home">
+    <span class="brand-seal" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg>
+    </span>
+    <span class="brand-text">
+      <strong>DocCounter</strong>
+      <small data-i18n="brandSub">Document &amp; Charges Register</small>
+    </span>
+  </a>
+  <div class="topbar-actions">
+    <label class="lang-wrap" for="langSelect">
+      <span data-i18n="languageLabel">Language</span>
+      <select id="langSelect" class="lang-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="bn">বাংলা</option>
+      </select>
+    </label>
+    <button id="installBtn" class="btn btn-ghost" hidden data-i18n="installApp">Install app</button>
+    <a href="#/admin" class="btn btn-outline" data-i18n="counterAdmin">Counter admin</a>
+  </div>
+</header>
+
+<main id="app" class="app-shell" aria-live="polite"></main>
+
+<footer class="foot-note">
+  <span data-i18n="footer">Works offline once installed. Data is stored only on this device.</span>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<input type="file" id="importFileInput" accept=".xlsx,.xls" hidden>
+
+<script src="lib/xlsx.full.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
